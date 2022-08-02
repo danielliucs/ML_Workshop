@@ -105,5 +105,5 @@ def getCSV(): # declaring function
 
     print("Converting dataframe to CSV.") # show message in terminal to let user know what's going on
     print(dfTransposed) # show dataframe in terminal
-    df.to_csv("shopInventory.csv") # create CSV file using to_csv()
+    dfTransposed.to_csv("shopInventory.csv") # create CSV file using to_csv()
     print("CSV File Created.\n") # tell user file has been created
