@@ -61,8 +61,11 @@ def addItem():
     viewInventory() # print updated inventory
 
 def removeItem(key): # Part 4: Write your function here, and delete pass
-    inventory.pop(key)
-    viewInventory()
+    if key in inventory.keys():
+        inventory.pop(key)
+        viewInventory()
+    else:
+        print("DOES ONT EXIST")
 
 def changeItem(): # declaring function
     key = str(input("Which item would you like to change? ")) # prompt user and get the item name as a string and store it in 'key'
