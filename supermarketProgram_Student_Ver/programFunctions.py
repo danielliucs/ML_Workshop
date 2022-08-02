@@ -32,7 +32,6 @@ def addItem():
     #Create a new dictionary
     #Ask the user on the item's info on price, in stock status, and discount
 
-
     viewInventory() # print updated inventory
 
 def removeItem(key): # Part 4: Write your function here, and delete pass
