@@ -18,7 +18,12 @@ def getOption(option): # gets the user's option selection and "directs" the flow
         print("That was not an option. Please choose again.\n")
 
 def viewInventory(): # Part 2: Write your function here, and delete pass
-    pass
+    print("\n", end="")
+    for n, info in inventory.items():
+        print("Food Type:", n)
+        for i, nestedInfo in info.items():
+            print(f'{i}: {nestedInfo}')
+        print("\n", end="")
 
 
 def addItem(): 
@@ -31,11 +36,25 @@ def addItem():
     # Part 3: write your function here
     #Create a new dictionary
     #Ask the user on the item's info on price, in stock status, and discount
+    price = float(input("What is the price of your food/item? "))
+    stock = bool(input("What is the boolean stock status of your food/item? 1 for true, 0 for false "))
+    discount = str(input("What is the discount of your food/item? "))
+    
+    if "None" == discount:
+        discount = None
+
+    nestedDict = {}
+    nestedDict["price"] = price
+    nestedDict["inStock"] = stock
+    nestedDict["discount"] = discount
+
+    inventory[item] = nestedDict
 
     viewInventory() # print updated inventory
 
 def removeItem(key): # Part 4: Write your function here, and delete pass
-    pass 
+    inventory.pop(key)
+    viewInventory()
 
 def changeItem(): # declaring function
     key = str(input("Which item would you like to change? ")) # prompt user and get the item name as a string and store it in 'key'
