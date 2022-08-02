@@ -47,7 +47,10 @@ def addItem():
         stock = True
     else:
         stock = False
-        
+
+    if discount[-1] != "%":
+        discount += "%"
+
     nestedDict = {}
     nestedDict["price"] = price
     nestedDict["inStock"] = stock

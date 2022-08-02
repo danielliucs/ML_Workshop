@@ -10,7 +10,7 @@ def main():
         
         if option == 6: # if 6 selected, end program
             return # returns out of main()
-            
+
         programFunctions.getOption(option) # calls getOption from programFunctions.py
         
 main() # calling main function
