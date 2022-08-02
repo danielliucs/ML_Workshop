@@ -37,12 +37,17 @@ def addItem():
     #Create a new dictionary
     #Ask the user on the item's info on price, in stock status, and discount
     price = float(input("What is the price of your food/item? "))
-    stock = bool(input("What is the boolean stock status of your food/item? 1 for true, 0 for false "))
+    stock = bool(input("Is your food/item in stock (yes or no)? "))
     discount = str(input("What is the discount of your food/item? "))
     
     if "None" == discount:
         discount = None
 
+    if "yes" == stock:
+        stock = True
+    else:
+        stock = False
+        
     nestedDict = {}
     nestedDict["price"] = price
     nestedDict["inStock"] = stock
